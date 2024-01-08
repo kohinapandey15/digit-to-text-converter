@@ -32,7 +32,7 @@ export class NumberToWordsPipe implements PipeTransform {
   
       // If the number is between 11 and 19, convert teens place
       if (num >= 11 && num <= 19) {
-        tempResult += teens[num - 11] + ' ';
+        tempResult += teens[num - 10] + ' ';
       } else if (num >= 20 || num === 10) {
         // If the number is 10 or greater than 20, convert tens place
         tempResult += tens[Math.floor(num / 10)] + ' ';

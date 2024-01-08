@@ -14,7 +14,7 @@ export class ConverterComponent {
 
   convert() {
     console.log("convert");
-    if (!this.isRange() || !this.isValidNumber()) {
+    if (!this.isRange() && !this.isValidNumber()) {
       return;
     }
 
