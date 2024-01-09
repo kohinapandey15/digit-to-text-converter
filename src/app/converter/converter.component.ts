@@ -14,7 +14,7 @@ export class ConverterComponent {
 
   convert() {
     console.log("convert");
-    if (!this.isRange() && !this.isValidNumber()) {
+    if (!this.isRange() || !this.isValidNumber()) {
       return;
     }
 
@@ -23,11 +23,17 @@ export class ConverterComponent {
   }
 
   isRange(): boolean {
-    if (this.inputNumber > 1000000) {
+    if (this.inputNumber > 1000000 ) {
       console.log("Invalid range detected");
       this.outputText = 'Please enter a value less than or equal to 10 lakhs.';
       return false;
     }
+    if (this.inputNumber <0) {
+      console.log("Invalid range detected");
+      this.outputText = 'Please enter a value greater than or equal to zero.';
+      return false;
+    }
+
 
     return true;
   }

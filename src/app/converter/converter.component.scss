@@ -1,54 +1,69 @@
 div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
-  
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  input {
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    position: relative;
+
+    &:focus {
+      border-color: #4caf50;
     }
-  
-    input {
-      padding: 12px;
-      margin-bottom: 20px;
-      font-size: 18px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      outline: none;
-  
-      &:focus {
-        border-color: #4caf50;
-      }
-    }
-  
-    button {
-      padding: 12px 20px;
-      font-size: 18px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #45a049;
-      }
-    }
-  
-    #output {
-     // margin-top: 20px;
-      font-size: 18px;
-      color: #0a4c6d;
-    //  padding: 15px;
-    //  border: 1px solid #ddd;
-      border-radius: 6px;
-   //   background-color: #f9f9f9;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+   
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: linear-gradient(to right, #3498db, #2c3e50); /* Multicolor gradient for button background */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: linear-gradient(to right, #2c3e50, #3498db); /* Multicolor gradient on hover */
     }
   }
-  
+
+  #output {
+    font-size: 18px;
+    color: #ffffff; /* Set the color for the output text */
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: #1a353c; /* Set a different background color for the output */
+    padding: 10px;
+    margin-top: 15px;
+    height: fit-content;
+    
+
+    
+  }
+}
+.arrow-image {
+  width: 90px; /* Adjust the width of the arrow image */
+  height: 100px;
+  position: absolute;
+  top: 55%;
+  left: 65%; /* Position the arrow in the middle */
+  transform: translate(-50%, -50%);
+
+  z-index: 2; /* Ensure the arrow image is above the arrows and elements */
+}
